@@ -2,7 +2,6 @@ package i_introduction._12_Extensions_On_Collections
 
 import util.TODO
 import util.doc12
-import java.util.*
 
 fun todoTask12(): Nothing = TODO(
     """
