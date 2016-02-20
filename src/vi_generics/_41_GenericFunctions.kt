@@ -20,9 +20,20 @@ fun task41(): Nothing = TODO(
 )
 
 fun <T, C : MutableCollection<T>> Collection<T>.partitionTo(left: C, right: C, predicate: (T) -> Boolean) : Pair<C, C> {
+    /*
+    Cheating and reusing partition...
     val (l, r) = partition(predicate)
     l.toCollection(left)
     r.toCollection(right)
+    */
+    forEach {
+        if(predicate(it)) {
+            left.add(it)
+        }
+        else {
+            right.add(it)
+        }
+    }
     return Pair(left, right)
 }
 
