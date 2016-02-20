@@ -5,5 +5,5 @@ fun example6() {
 }
 
 fun Customer.getTotalOrderPrice(): Double {
-    return orders.flatMap { it.products }.sumByDouble { it.price }
+    return orders.flatMap { it.products }.map { it.price }.sum()
 }
